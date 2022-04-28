@@ -1,8 +1,8 @@
 # Page settings
 
-baseURL = "http://example.org/"
+baseURL = "https://resume.jessicadeen.com"
 languageCode = "en"
-title = ""
+title = "Jessica Deen | Principal Engineer"
 enableGitInfo = true
 googleAnalytics = "UA-XXXXXXX-Y"
 
