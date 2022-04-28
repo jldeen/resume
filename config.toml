@@ -164,10 +164,10 @@ googleAnalytics = "UA-XXXXXXX-Y"
         details = "Advocated on behalf of operations engineers through the use of social media resources such as Twitter, third party forums and listening tools. I provided helpful responses to engineers in client and partner companies for their deployments. Consistently community recongized 'Best' for most consistently valuable responses and support."
 
         [[params.experience.list]]
-        title = "ClickAway Computers"
-        dates = "2009 - 2012"
-        company = "Technical System Sales/Services"
-        details = "Top producing sales assocaite / technical expert. Increased net profit annually by 110%; performed hardware builds, integration, repairs, and upgrades. During 3 year tenure with the company, personally generated in excess of $500k revenue. Spearheaded comprehensive Windows 7 upgrade projects for legacy systems."
+        title = "Jessica Deen Consulting"
+        dates = "2004 - Present"
+        company = "Sole Proprietor"
+        details = "Small boutique technology consulting catering to small to medium size businesses."
 
     [params.projects]
         enable = true
