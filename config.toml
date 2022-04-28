@@ -1,6 +1,6 @@
 # Page settings
 
-baseURL = "https://resume.jessicadeen.com"
+baseURL = "https://resume.jessicadeen.com/"
 languageCode = "en"
 title = "Jessica Deen | Principal Engineer"
 enableGitInfo = true
