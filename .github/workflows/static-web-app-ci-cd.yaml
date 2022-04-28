@@ -67,12 +67,6 @@ jobs:
           echo "::add-mask::$DEPLOYMENT_TOKEN"
           echo "::set-output name=DEPLOYMENT_TOKEN::$DEPLOYMENT_TOKEN"
 
-          # Hugo Env Vars
-          export HUGOxPARAMSxGITxLAST_COMMITxAUTHORNAME=$(git log -1 --format=%an)
-          export HUGOxPARAMSxGITxLAST_COMMITxDATE=$(git log -1 --format=%cd --date=format:'%B %d, %Y')
-          export HUGOxPARAMSxGITxLAST_COMMITxHASH=$(git log -1 --format=%H)
-          export HUGOxPARAMSxGITxLAST_COMMITxSUBJECT=$(git log -1 --format=%s)
-
       - name: Build And Deploy Resume
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -88,6 +82,10 @@ jobs:
           ###### End of Repository/Build Configurations ######
         env:
           HUGO_VERSION: 0.98.0
+          HUGOxPARAMSxGITxLAST_COMMITxAUTHORNAME: $(git log -1 --format=%an)
+          HUGOxPARAMSxGITxLAST_COMMITxDATE: $(git log -1 --format=%cd --date=format:'%B %d, %Y')
+          HUGOxPARAMSxGITxLAST_COMMITxHASH: $(git log -1 --format=%H)
+          HUGOxPARAMSxGITxLAST_COMMITxSUBJECT: $(git log -1 --format=%s)
       
       - name: Add secret
         uses: jldeen/actions-set-secret@releases/v1
