@@ -1,0 +1,225 @@
+# Page settings
+
+baseURL = "http://example.org/"
+languageCode = "en"
+title = ""
+enableGitInfo = true
+googleAnalytics = "UA-XXXXXXX-Y"
+
+[params]
+    author = "Jessica Deen"
+    description = "DevResume"
+    ghRepo = "https://github.com/jldeen/hugoweb/"
+    hugoRepo = "https://github.com/gohugoio/hugo/"
+
+    [params.profile]
+        enable = true
+        name = "Jessica Deen"
+        tagline = "Principal Engineer"
+        avatar = "jessica-deen.png"
+
+    [params.contact]
+        enable = true
+        location = "San Francisco Bay Area"
+
+        [[params.contact.list]]
+        icon = "fas fa-phone-square"
+        url = "tel:<redacted>"
+        text = "<redacted>"
+        [[params.contact.list]]
+        icon = "fas fa-envelope-square"
+        url = "mailto:jessica@jessicadeen.com"
+        text = "jessica@jessicadeen.com"
+        [[params.contact.list]]
+        icon = "fas fa-globe"
+        url = "https://jessicadeen.com"
+        text = "https://jessicadeen.com"
+
+    [params.skills]
+        enable = true
+
+        [[params.skills.list]]
+        title = "Technical"
+        [[params.skills.list.items]]
+        details = "Working knowledge of JavaScript / Node.js"
+        [[params.skills.list.items]]
+        details = "Python"
+        [[params.skills.list.items]]
+        details = "Working knowledge of Rust"
+        [[params.skills.list.items]]
+        details = "Linux"
+        [[params.skills.list.items]]
+        details = "GitHub Actions"
+        [[params.skills.list.items]]
+        details = "Jenkins"
+        [[params.skills.list.items]]
+        details = "Azure DevOps"
+
+        [[params.skills.list]]
+        title = "Professional"
+        [[params.skills.list.items]]
+        details = "Effective communication"
+        [[params.skills.list.items]]
+        details = "Team player"
+        [[params.skills.list.items]]
+        details = "Dynamic Public Speaker"
+        [[params.skills.list.items]]
+        details = "Good time management"
+
+    [params.education]
+        enable = false
+
+        [[params.education.list]]
+        degree = "MSc in Computer Science"
+        university = "University College London"
+        dates = "2010 - 2011"
+        [[params.education.list]]
+        degree = "BSc Maths and Physics"
+        university = "Imperial College London"
+        dates = "2007 - 2010"
+
+    [params.awards]
+        enable = true
+
+        [[params.awards.list]]
+        name = "Most Valuable Professional"
+        body = "Microsoft"
+        date = "2014-2018"
+        [[params.awards.list]]
+        name = "Carl Quinn Speaker Award"
+        body = "JFrog"
+        date = "2020"
+
+    [params.languages]
+        enable = true
+
+        [[params.languages.list]]
+        name = "English"
+        level = "Native"
+
+    [params.interests]
+        enable = true
+
+        [[params.interests.list]]
+        name = "Camping"
+        [[params.interests.list]]
+        name = "Cooking"
+        [[params.interests.list]]
+        name = "Music"
+        [[params.interests.list]]
+        name = "Travelling"
+
+    [params.summary]
+        enable = true
+        text = "I'm a motivated and creative engineer with nearly 15 years of experience. I'm highly adapatable, I work well independently, as part of a team, and I am as comfortable working in tandem with others as I am leading them. I enjoy new challenges, but also have great patience attending to details necessary to delivery outstanding value."
+
+
+    [params.experience]
+        enable = true
+
+        [[params.experience.list]]
+        title = "Principal Content Engineer"
+        dates = "2021 - Present"
+        company = "Microsoft"
+        details = "Define strategy, assist in team growth, focus on community engagement, empower and enable engineers in containers, distributed technologies, and DevOps."
+        [[params.experience.list.items]]
+        details = "DevOps (Jenkins, GitHub Actions, Azure DevOps)"
+        [[params.experience.list.items]]
+        details = "Linux, Distributed Systems, and Open Source Projects"
+        [[params.experience.list.items]]
+        details = "Dynamic Content Creator"
+
+        [[params.experience.list]]
+        title = "Senior Content Engineer"
+        dates = "2018-2021"
+        company = "Microsoft"
+        details = "Championed Azure products through demos and code samples focusing on integrating DevOps best practices to existing processes. Provided technical feedback and guidance to engineering teams focused on DevOps and containers."
+        [[params.experience.list.items]]
+        details = "Exceptional Public Speaker"
+        [[params.experience.list.items]]
+        details = "Strong understanding of containers, Kubernetes, and DevOps"
+
+        [[params.experience.list]]
+        title = "Content Engineer II"
+        dates = "2017-2018"
+        company = "Microsoft"
+        details = "Cultivated a deeply technical relationship with broad communities on a 1 to many level through the use of public speaking, code contributions, and bi directional communication between community and product groups."
+
+        [[params.experience.list]]
+        title = "Technical Evangelist"
+        dates = "2016-2017"
+        company = "Microsoft"
+        details = "Produced high quality technical artifacts (videos, blog posts, code, open source projects, documentation), which are then leveraged by the community."
+
+        [[params.experience.list]]
+        title = "Systems Integration Engineer"
+        dates = "2014 - 2016"
+        company = "SPK and Associates, LLC."
+        details = "Performed the duties of a systems administrator for Windows and Linux applications. Created, complied, and test scripts and executables for automation of R&D applciations such as SolidWorks, Enterprise PDM, Enovia, National Instruments LabView, and PTC Creo."
+
+        [[params.experience.list]]
+        title = "Corporate Online Services"
+        dates = "2011-2014"
+        company = "Social Media Engagement Manager"
+        details = "Advocated on behalf of operations engineers through the use of social media resources such as Twitter, third party forums and listening tools. I provided helpful responses to engineers in client and partner companies for their deployments. Consistently community recongized 'Best' for most consistently valuable responses and support."
+
+        [[params.experience.list]]
+        title = "ClickAway Computers"
+        dates = "2009 - 2012"
+        company = "Technical System Sales/Services"
+        details = "Top producing sales assocaite / technical expert. Increased net profit annually by 110%; performed hardware builds, integration, repairs, and upgrades. During 3 year tenure with the company, personally generated in excess of $500k revenue. Spearheaded comprehensive Windows 7 upgrade projects for legacy systems."
+
+    [params.projects]
+        enable = true
+
+        [[params.projects.list]]
+        title = "Tailwind Traders (Backend)"
+        meta = "Contributor"
+        tagline = "Contributed to Microsoft's Tailwind Traders sample applications, which features 11 different microservices. Added support for Bridge to Kubernetes, an iterative development tool used for authoring microservice applications specifically designed for Kubernetes."
+
+        [[params.projects.list]]
+        title = "Brige to Kubernetes (Code name: Mindaro)"
+        meta = "Contributor"
+        tagline = "Bridge to Kubernetes extends the Kubernetes perimeter to your development computer allowing you to write, test, and debug microservice code while connected to your Kubernetes cluster with the rest of your application or services."
+
+        [[params.projects.list]]
+        title = "Jessica Deen Blog (built on Hugo)"
+        meta = "Owner"
+        tagline = "Side project for personal blog. Built using Hugo, running on Azure Static Web Apps, and deployed via GitHub Actions."
+
+    [params.information]
+        enable = false
+
+        [[params.information.list]]
+        title = "Papers"
+        [[params.information.list.items]]
+        details = "2018 · Lorem Ipsum"
+        [[params.information.list.items]]
+        details = "2016 · Sed Fringilla"
+
+        [[params.information.list]]
+        title = "Interests"
+        details = "Camping, Cooking, Travelling, Music"
+
+
+
+
+
+
+
+
+    [params.social]
+        enable = true
+
+        [[params.social.list]]
+        icon = "fab fa-github-square"
+        url = "https://github.com/jldeen"
+        title = "https://github.com/jldeen"
+        [[params.social.list]]
+        icon = "fab fa-linkedin"
+        url = "https://linkedin.com/in/jldeen"
+        title = "https://linkedin.com/in/jldeen"
+        [[params.social.list]]
+        icon = "fab fa-twitter-square"
+        url = "https://twitter.com/jldeen"
+        title = "https://twitter.com/jldeen"
