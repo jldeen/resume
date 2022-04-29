@@ -107,7 +107,7 @@ googleAnalytics = "UA-XXXXXXX-Y"
         [[params.interests.list]]
         name = "Music"
         [[params.interests.list]]
-        name = "Travelling"
+        name = "Traveling"
 
     [params.summary]
         enable = true
@@ -198,7 +198,7 @@ googleAnalytics = "UA-XXXXXXX-Y"
 
         [[params.information.list]]
         title = "Interests"
-        details = "Camping, Cooking, Travelling, Music"
+        details = "Camping, Cooking, Traveling, Music"
 
     [params.social]
         enable = true

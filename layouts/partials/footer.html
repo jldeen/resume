@@ -8,14 +8,19 @@
                 If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com
             */-->
 
-            <small class="copyright text-muted">Designed with <i class="fas fa-heart"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+            <small class="copyright text-muted">Designed with <i class="fas fa-heart"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers.</small>
             <br>
-            <small class="copyright">{{ now.Year }} &copy; {{ with .Site.Params.footer.copyright }}{{ . | markdownify }}{{ else }}Ported to Hugo by <a href="https://github.com/cowboysmall" target="_blank">CowboySmall</a> and updated by <a href="https://github.com/jldeen" target="_blank">Jessica Deen</a></br>
+            <small class="copyright">
+                {{ now.Year }} &copy; {{ with .Site.Params.footer.copyright }}{{ . | markdownify }}{{ else }}Ported to Hugo by <a href="https://github.com/cowboysmall" target="_blank">CowboySmall</a> and updated by <a href="https://github.com/jldeen" target="_blank">Jessica Deen</a>.</br>
+              {{ end }}
+              
+                Running on <a href="https://azure.microsoft.com/services/app-service/static/?WT.mc_id=opensource-00000-jessde#overview" target="_blank">Azure Static Web Apps</a>.</br>
+
                 Powered by <a href="https://gohugo.io/">Hugo</a> version <a href="{{ .Site.Params.hugoRepo }}releases/tag/v{{ hugo.Version }}" target="_blank">{{ hugo.Version }}</a> and commit <a href={{ .Site.Params.hugoRepo }}commit/{{ hugo.CommitHash }} target="_blank">{{ hugo.CommitHash | truncate 7 "" }}</a>.
               </br>
-              {{ with site.Params }}
-              Deployed via <a href="https://github.com/features/actions" target="_blank">GitHub Actions</a> from commit <a href="{{ .ghRepo }}commit/{{ .git.last_commit.hash }}" target="_blank">{{ .git.last_commit.hash | truncate 7 "" }}</a> on {{ .git.last_commit.date }}.
-                {{ end }}
-                {{ end }}
+
+                {{ with site.Params }}
+                    Deployed via <a href="https://github.com/features/actions" target="_blank">GitHub Actions</a> from commit <a href="{{ .ghRepo }}commit/{{ .git.last_commit.hash }}" target="_blank">{{ .git.last_commit.hash | truncate 7 "" }}</a> on {{ .git.last_commit.date }}.
+                {{ end }}</br>
             </small>
         </footer>
