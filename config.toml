@@ -9,7 +9,7 @@ googleAnalytics = "UA-XXXXXXX-Y"
 [params]
     author = "Jessica Deen"
     description = "DevResume"
-    ghRepo = "https://github.com/jldeen/hugoweb/"
+    ghRepo = "https://github.com/jldeen/resume/"
     hugoRepo = "https://github.com/gohugoio/hugo/"
 
     [params.profile]
