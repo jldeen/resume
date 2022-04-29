@@ -5,7 +5,7 @@
     <img src ="https://img.shields.io/github/last-commit/jldeen/resume" alt="Last Commit">
     <img src ="https://img.shields.io/github/issues/jldeen/resume?color=important" alt="Open Issues">
     <img src ="https://img.shields.io/github/issues-pr/jldeen/resume?color=yellowgreen" alt="Open Pull Reqeusts">
-    <img src ="https://img.shields.io/github/license/jldeen/resume" alt="License">
+    <img src ="https://img.shields.io/badge/license-MIT-green" alt="License">
 </p>
 
 # Jessica Deen Resume
