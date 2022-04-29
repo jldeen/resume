@@ -111,8 +111,7 @@ googleAnalytics = "UA-XXXXXXX-Y"
 
     [params.summary]
         enable = true
-        text = "I'm a motivated and creative engineer with nearly 15 years of experience. I'm highly adapatable, I work well independently, as part of a team, and I am as comfortable working in tandem with others as I am leading them. I enjoy new challenges, but also have great patience attending to details necessary to delivery outstanding value."
-
+        text = "I'm a motivated and creative engineer with over 15 years of experience. I'm highly adapatable, I work well independently, as part of a team, and I am as comfortable working in tandem with others as I am leading them. I enjoy new challenges, but also have great patience attending to details necessary to delivery outstanding value."
 
     [params.experience]
         enable = true
@@ -200,13 +199,6 @@ googleAnalytics = "UA-XXXXXXX-Y"
         [[params.information.list]]
         title = "Interests"
         details = "Camping, Cooking, Travelling, Music"
-
-
-
-
-
-
-
 
     [params.social]
         enable = true
