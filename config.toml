@@ -174,16 +174,19 @@ googleAnalytics = "UA-XXXXXXX-Y"
         [[params.projects.list]]
         title = "Tailwind Traders (Backend)"
         meta = "Contributor"
+        url = "https://github.com/microsoft/TailwindTraders-Backend"
         tagline = "Contributed to Microsoft's Tailwind Traders sample applications, which features 11 different microservices. Added support for Bridge to Kubernetes, an iterative development tool used for authoring microservice applications specifically designed for Kubernetes."
 
         [[params.projects.list]]
         title = "Brige to Kubernetes (Code name: Mindaro)"
         meta = "Contributor"
+        url = "https://github.com/microsoft/mindaro"
         tagline = "Bridge to Kubernetes extends the Kubernetes perimeter to your development computer allowing you to write, test, and debug microservice code while connected to your Kubernetes cluster with the rest of your application or services."
 
         [[params.projects.list]]
         title = "Jessica Deen Blog (built on Hugo)"
         meta = "Owner"
+        url = "https://github.com/jldeen/hugoweb"
         tagline = "Side project for personal blog. Built using Hugo, running on Azure Static Web Apps, and deployed via GitHub Actions."
 
     [params.information]
