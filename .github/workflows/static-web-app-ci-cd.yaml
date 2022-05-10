@@ -40,7 +40,7 @@ jobs:
 
       # login to Azure
       - name: "Login via Azure CLI"
-        uses: azure/login@v1
+        uses: azure/login@v1.4.2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           # client-id: ${{ secrets.AZURE_CLIENT_ID }}
