@@ -24,7 +24,7 @@ subscriptionId=$(az account show --query id -o tsv)
             --scopes /subscriptions/$subscriptionId/resourceGroups/$project)
 
     # save spInfo locally
-    echo $spInfo > auth.json        
+    echo $spInfo > auth1.json        
 
     if [ $? == 0 ]; then
         
