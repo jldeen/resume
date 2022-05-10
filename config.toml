@@ -41,19 +41,21 @@ googleAnalytics = "UA-XXXXXXX-Y"
         [[params.skills.list]]
         title = "Technical"
         [[params.skills.list.items]]
-        details = "Working knowledge of JavaScript / Node.js"
-        [[params.skills.list.items]]
-        details = "Python"
-        [[params.skills.list.items]]
-        details = "Working knowledge of Rust"
-        [[params.skills.list.items]]
-        details = "Linux"
-        [[params.skills.list.items]]
         details = "GitHub Actions"
         [[params.skills.list.items]]
         details = "Jenkins"
         [[params.skills.list.items]]
         details = "Azure DevOps"
+        [[params.skills.list.items]]
+        details = "Linux"
+        [[params.skills.list.items]]
+        details = "Working knowledge of:"
+        [[params.skills.list.items]]
+        details = "Python"
+        [[params.skills.list.items]]
+        details = "JavaScript / Node.js"
+        [[params.skills.list.items]]
+        details = "Rust"
 
         [[params.skills.list]]
         title = "Professional"
@@ -124,7 +126,9 @@ googleAnalytics = "UA-XXXXXXX-Y"
         [[params.experience.list.items]]
         details = "DevOps (Jenkins, GitHub Actions, Azure DevOps)"
         [[params.experience.list.items]]
-        details = "Linux, Distributed Systems, and Open Source Projects"
+        details = "Infrastrucutre as Code (IaC) (I.E. Azure Bicep)"
+        [[params.experience.list.items]]
+        details = "Containers, Distributed Systems (Kubernetes), and Open Source Projects"
         [[params.experience.list.items]]
         details = "Dynamic Content Creator"
 
@@ -157,10 +161,10 @@ googleAnalytics = "UA-XXXXXXX-Y"
         details = "Performed the duties of a systems administrator for Windows and Linux applications. Created, complied, and test scripts and executables for automation of R&D applciations such as SolidWorks, Enterprise PDM, Enovia, National Instruments LabView, and PTC Creo."
 
         [[params.experience.list]]
-        title = "Corporate Online Services"
+        title = "Social Media Engagement Manager"
         dates = "2011-2014"
-        company = "Social Media Engagement Manager"
-        details = "Advocated on behalf of operations engineers through the use of social media resources such as Twitter, third party forums and listening tools. I provided helpful responses to engineers in client and partner companies for their deployments. Consistently community recongized 'Best' for most consistently valuable responses and support."
+        company = "Corporate Online Services"
+        details = "Advocated on behalf of operations engineers through the use of social media resources such as Twitter, third party forums and listening tools. Consistently community recongized 'Best' for most consistently valuable responses and support."
 
         [[params.experience.list]]
         title = "Jessica Deen Consulting"
@@ -188,6 +192,12 @@ googleAnalytics = "UA-XXXXXXX-Y"
         meta = "Owner"
         url = "https://github.com/jldeen/hugoweb"
         tagline = "Side project for personal blog. Built using Hugo, running on Azure Static Web Apps, and deployed via GitHub Actions."
+
+        [[params.projects.list]]
+        title = "Elgato Keylight CLI"
+        meta = "Owner"
+        url = "https://github.com/jldeen/keylight-cli"
+        tagline = "Cross platform lightweight LCI tool to simply and easily control your Elgato Keylight via local IP address. (More reliable than the Elgato Control Center Software)"
 
     [params.information]
         enable = false
