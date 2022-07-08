@@ -19,7 +19,7 @@ module staticSiteProd './modules/createAzureStaticSite.bicep' = {
   params: {
     name: 'resume'
     location: location
-    customDomains: customDomains
+    /*customDomains: customDomains*/
     repositoryUrl: 'https://github.com/jldeen/resume'
     repositoryToken: repositoryToken
     branch: 'main'

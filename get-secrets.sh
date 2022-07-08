@@ -9,7 +9,7 @@ set -e
 spName=resume
 subName="jdc"
 project="resume"
-location="eastus"
+location="eastus2"
 
 # set the subscription
 az account set --subscription "$subName" && echo "Your default subscription has been set to: $subName"
@@ -28,7 +28,11 @@ az group create --name $project --location $location
             --scopes /subscriptions/$subscriptionId/resourceGroups/$project)
 
     # save spInfo locally
-    echo $spInfo > auth.json        
+    echo $spInfo > auth.json
+
+    #ensure role assignment is created
+    clientId=$(echo $spInfo | jq -r '.clientId')
+    az role assignment create --role "Owner" --assignee $clientId && echo "Owner role assignment created for $clientId"       
 
     if [ $? == 0 ]; then
         
