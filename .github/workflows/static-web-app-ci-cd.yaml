@@ -32,20 +32,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
-      
-      # Temp change until action is figured out
-      - name: "Login via Azure CLI"
-        run: |
-          az login --service-principal -u ${{ secrets.AZURE_CLIENT_ID }} -p ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
 
-      # # login to Azure
-      # - name: "Login via Azure CLI"
-      #   uses: azure/login@v1
-      #   with:
-      #     creds: ${{ secrets.AZURE_CREDENTIALS }}
-      #     client-id: ${{ secrets.AZURE_CLIENT_ID }}
-      #     tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-      #     subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      # login to Azure
+      - name: "Login via Azure CLI"
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       # detach provider
       - name: "Detach provider"
@@ -99,7 +91,7 @@ jobs:
           output_location: "public" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         env:
-          HUGO_VERSION: 0.98.0
+          HUGO_VERSION: 0.101.0
           HUGOxPARAMSxGITxLAST_COMMITxAUTHORNAME: ${{ env.AUTHORNAME }}
           HUGOxPARAMSxGITxLAST_COMMITxDATE: ${{ env.COMMITDATE }}
           HUGOxPARAMSxGITxLAST_COMMITxHASH: ${{ env.COMMITHASH }}
