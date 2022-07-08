@@ -7,14 +7,18 @@ set -e
 
 # Set the following
 spName=resume
-subName="ca-jessde-demo-test"
+subName="jdc"
 project="resume"
+location="eastus"
 
 # set the subscription
 az account set --subscription "$subName" && echo "Your default subscription has been set to: $subName"
 
 # Get Subscription ID
 subscriptionId=$(az account show --query id -o tsv)
+
+# Create Resource group
+az group create --name $project --location $location
 
 # Create a service principal
     echo "Creating service principal..."
