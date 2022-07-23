@@ -119,8 +119,13 @@ googleAnalytics = "UA-XXXXXXX-Y"
         enable = true
 
         [[params.experience.list]]
+        title = "TO BE ANNOUNCED"
+        dates = "2022 - Present"
+        company = "TO BE ANNOUNCED"
+
+        [[params.experience.list]]
         title = "Principal Content Engineer"
-        dates = "2021 - Present"
+        dates = "2021 - 2022"
         company = "Microsoft"
         details = "Define strategy, assist in team growth, focus on community engagement, empower and enable engineers in containers, distributed technologies, and DevOps."
         [[params.experience.list.items]]
