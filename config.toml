@@ -119,9 +119,13 @@ googleAnalytics = "UA-XXXXXXX-Y"
         enable = true
 
         [[params.experience.list]]
-        title = "TO BE ANNOUNCED"
+        title = "Principal Developer Advocate"
         dates = "2022 - Present"
-        company = "TO BE ANNOUNCED"
+        company = "AWS"
+        details = "Focusing on Native Containers"
+        [[params.experience.list.items]]
+        details = "Elastic Container Service (ECS)"
+
 
         [[params.experience.list]]
         title = "Principal Content Engineer"
