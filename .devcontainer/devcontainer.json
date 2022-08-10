@@ -1,5 +1,5 @@
 {
-	"name": "Cloud Native Hugo",
+	"name": "Hugo Resume",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": {
