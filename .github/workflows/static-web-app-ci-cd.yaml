@@ -17,8 +17,9 @@ env:
   location: "eastus2"
 
 permissions:
-  id-token: write
   contents: read
+  pull-requests: write
+  id-token: write
 
 jobs:
   build_and_deploy_job:
@@ -91,7 +92,7 @@ jobs:
           output_location: "public" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         env:
-          HUGO_VERSION: 0.101.0
+          HUGO_VERSION: 0.121.1
           HUGOxPARAMSxGITxLAST_COMMITxAUTHORNAME: ${{ env.AUTHORNAME }}
           HUGOxPARAMSxGITxLAST_COMMITxDATE: ${{ env.COMMITDATE }}
           HUGOxPARAMSxGITxLAST_COMMITxHASH: ${{ env.COMMITHASH }}

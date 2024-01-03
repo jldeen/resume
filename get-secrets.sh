@@ -32,7 +32,7 @@ az group create --name $project --location $location
 
     #ensure role assignment is created
     clientId=$(echo $spInfo | jq -r '.clientId')
-    az role assignment create --role "Owner" --assignee $clientId && echo "Owner role assignment created for $clientId"       
+    az role assignment create --role "Owner" --assignee $clientId --scope /subscriptions/$subscriptionId/resourceGroups/$project && echo "Owner role assignment created for $clientId"       
 
     if [ $? == 0 ]; then
         

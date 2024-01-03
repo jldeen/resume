@@ -77,6 +77,15 @@ $btn-color: #ff0000;
 
 	.resume-wrapper * {
 	  visibility: visible;
+	  font-size: 14pt;
+	  font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.resume-profile-image {
+		position: absolute;
+		top: 6em;
+		right: 6em;
+		transform: scale(2);
 	}
 
 	.resume-wrapper {
@@ -84,9 +93,10 @@ $btn-color: #ff0000;
 	  left: 0;
 	  top: 0;
 	}
+	
 	@page {
 		margin: 2cm;
-		size: 16in 20.5in;
+		size: 16in 21in;
 	}
   }
 

@@ -47,6 +47,8 @@ googleAnalytics = "UA-XXXXXXX-Y"
         [[params.skills.list.items]]
         details = "Azure DevOps"
         [[params.skills.list.items]]
+        details = "AWS CloudFormation"
+        [[params.skills.list.items]]
         details = "Linux"
         [[params.skills.list.items]]
         details = "Working knowledge of:"
@@ -66,7 +68,7 @@ googleAnalytics = "UA-XXXXXXX-Y"
         [[params.skills.list.items]]
         details = "Dynamic Public Speaker"
         [[params.skills.list.items]]
-        details = "Good time management"
+        details = "Excellent time management"
 
     [params.education]
         enable = false
@@ -113,7 +115,7 @@ googleAnalytics = "UA-XXXXXXX-Y"
 
     [params.summary]
         enable = true
-        text = "I'm a motivated and creative engineer with over 15 years of experience. I'm highly adapatable, I work well independently, as part of a team, and I am as comfortable working in tandem with others as I am leading them. I enjoy new challenges, but also have great patience attending to details necessary to delivery outstanding value."
+        text = "I'm a motivated and creative engineer with over 19 years of experience. I'm highly adapatable, I work well independently, as part of a team, and I am as comfortable working in tandem with others as I am leading them. I enjoy new challenges, but also have great patience attending to details necessary to delivery outstanding value."
 
     [params.experience]
         enable = true
@@ -122,9 +124,15 @@ googleAnalytics = "UA-XXXXXXX-Y"
         title = "Principal Developer Advocate"
         dates = "2022 - Present"
         company = "AWS"
-        details = "Focusing on Native Containers"
+        details = "Drive strategic initiatives to enhance developer experience, foster a thriving community around Amazon ECS and serverless technologies, and provide actionable feedback to shape product development."
         [[params.experience.list.items]]
-        details = "Elastic Container Service (ECS)"
+        details = "Amazon Elastic Container Service (ECS)"
+        [[params.experience.list.items]]
+        details = "Infrastructure as Code (IaC) (I.E. AWS CloudFormation, AWS SAM CLI)"
+        [[params.experience.list.items]]
+        details = "DevOps (GitHub Actions: focus on reusable workflows)"
+        [[params.experience.list.items]]
+        details = "High Quality Reusable Content Creation"
 
 
         [[params.experience.list]]
@@ -135,7 +143,7 @@ googleAnalytics = "UA-XXXXXXX-Y"
         [[params.experience.list.items]]
         details = "DevOps (Jenkins, GitHub Actions, Azure DevOps)"
         [[params.experience.list.items]]
-        details = "Infrastrucutre as Code (IaC) (I.E. Azure Bicep)"
+        details = "Infrastructure as Code (IaC) (I.E. Azure Bicep)"
         [[params.experience.list.items]]
         details = "Containers, Distributed Systems (Kubernetes), and Open Source Projects"
         [[params.experience.list.items]]
@@ -185,13 +193,26 @@ googleAnalytics = "UA-XXXXXXX-Y"
         enable = true
 
         [[params.projects.list]]
+        title = 'Containers on AWS Community Hub'
+        meta = 'Contributor / Co-Owner'
+        url = 'https://github.com/aws-samples/container-patterns'
+        tagline = 'Collaboratively created <a href="https://containersonaws.com">Containers on AWS</a>, spearheading the design and implementation of the blog, frontend framework, and user-centric pages. Introduced end-to-end deployment pipelines via GitHub Actions, ensuring a reliable, reusable, and repeatable process that propelled a 400% increase in daily traffic over the span of 5 months, totaling 160,000 views and enhancing the Amazon ECS community web experience.'
+
+        [[params.projects.list]]
+        title = 'Amazon ECS URL Shortener & QR Code Generator'
+        meta = 'Owner'
+        url = 'https://github.com/jldeen/shorturl'
+        tagline = 'Optimized team engagement with Amazon ECS content by developing <a href="https://s18s.io">s18s.io</a>, a dedicated URL shortener hosted on Amazon ECS. Through branded short links and integrated QR codes, this site enhanced accessibility, distribution, and strategic integration into diverse content channels, showcasing our team&#39;s commitment to user engagement and the efficiency of Amazon ECS.'
+        
+
+        [[params.projects.list]]
         title = "Tailwind Traders (Backend)"
         meta = "Contributor"
         url = "https://github.com/microsoft/TailwindTraders-Backend"
         tagline = "Contributed to Microsoft's Tailwind Traders sample applications, which features 11 different microservices. Added support for Bridge to Kubernetes, an iterative development tool used for authoring microservice applications specifically designed for Kubernetes."
 
         [[params.projects.list]]
-        title = "Brige to Kubernetes (Code name: Mindaro)"
+        title = "Bridge to Kubernetes (Code name: Mindaro)"
         meta = "Contributor"
         url = "https://github.com/microsoft/mindaro"
         tagline = "Bridge to Kubernetes extends the Kubernetes perimeter to your development computer allowing you to write, test, and debug microservice code while connected to your Kubernetes cluster with the rest of your application or services."
