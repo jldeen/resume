@@ -20,6 +20,10 @@ links:
     text: github.com/jldeen
     url: https://github.com/jldeen
     icon: github
+  - label: X
+    text: x.com/jldeen
+    url: https://x.com/jldeen
+    icon: x
   - label: Website
     text: jessicadeen.com
     url: https://jessicadeen.com
