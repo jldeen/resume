@@ -29,7 +29,7 @@ All resume content lives in [`data/resume.yaml`](data/resume.yaml): headline, Ab
 
 ## Running locally
 
-Requires [Hugo](https://gohugo.io/installation/) 0.158 or later (any edition) (CI uses 0.168.0; the dev container installs the same version).
+Requires [Hugo](https://gohugo.io/installation/) 0.158 or later (any edition) (CI installs 0.168.0 on the runner and uploads the built site; the dev container uses the same version).
 
 ```sh
 hugo server          # http://localhost:1313
