@@ -111,6 +111,10 @@ projects:
     role: Creator
     url: https://github.com/jldeen/keylight-cli
     summary: Cross-platform CLI for controlling Elgato Key Lights over the local network.
+  - name: dotfiles
+    role: Creator
+    url: https://github.com/jldeen/dotfiles
+    summary: My cross-platform shell and dev environment setup, starred by 249 developers and forked 110 times.
 
 skills:
   - group: Storytelling & advocacy
