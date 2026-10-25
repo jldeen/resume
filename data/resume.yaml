@@ -127,11 +127,33 @@ projects:
 
 skills:
   - group: Storytelling & advocacy
-    items: [Technical storytelling, Executive communication, Keynote narratives & talk tracks, Technical demonstrations, Public speaking, Developer relations, Developer feedback to product]
+    items:
+      - Technical storytelling
+      - Executive communication
+      - "Keynote narratives & talk tracks"
+      - Technical demonstrations
+      - Public speaking
+      - Developer relations
+      - Developer feedback to product
   - group: Platforms
-    items: [GitHub Copilot, GitHub Actions, Microsoft Foundry, Microsoft Fabric, Microsoft Azure, AWS (Amazon ECS, serverless)]
+    items:
+      - GitHub Copilot
+      - GitHub Actions
+      - Microsoft Foundry
+      - Microsoft Fabric
+      - Microsoft Azure
+      - "AWS (Amazon ECS, serverless)"
   - group: Engineering
-    items: [DevOps & CI/CD, Kubernetes, Docker & containers, "Infrastructure as code (Bicep, CloudFormation, SAM)", Linux, Python, JavaScript / Node.js, Rust, Open source]
+    items:
+      - "DevOps & CI/CD"
+      - Kubernetes
+      - "Docker & containers"
+      - "Infrastructure as code (Bicep, CloudFormation, SAM)"
+      - Linux
+      - Python
+      - JavaScript / Node.js
+      - Rust
+      - Open source
 
 recognition:
   - name: Microsoft MVP, Windows Expert IT Pro
