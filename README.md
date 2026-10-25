@@ -13,7 +13,7 @@ This is the current home of [Jessica Deen's Resume](https://resume.jessicadeen.c
 
 The main goal of converting the resume from print to web interface is to demonstrate skills and knowledge stated in said resume first hand. 
 
-The site is a small custom Hugo layout with no CSS framework, icon font, or third-party requests. It follows the OS light/dark preference (with a manual toggle), works on mobile, and has a print stylesheet so **Download PDF** (or the browser's Print → Save as PDF) produces a clean one-page resume.
+The site is a small custom Hugo layout with no CSS framework, icon font, or third-party requests. It uses a developer/terminal-inspired design that is dark by default (with a light-mode toggle), works on mobile, and has a print stylesheet so **Download PDF** (or the browser's Print → Save as PDF) produces a clean one-page resume.
 
 ## Editing content
 

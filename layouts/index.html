@@ -1,110 +1,100 @@
 {{ define "main" }}
 {{- $r := hugo.Data.resume -}}
-<header class="hero">
-  <div class="wrap hero-inner">
-    <div class="hero-text">
-      <p class="eyebrow">{{ $r.headline }}</p>
-      <h1>{{ $r.name }}</h1>
-      <p class="pitch">{{ $r.pitch }}</p>
-      <p class="focus">{{ $r.focus }}</p>
-      <p class="location">{{ partial "icon.html" "pin" }}{{ $r.location }}</p>
-      <ul class="links" aria-label="Contact and profiles">
-        {{- range $r.links }}
-        <li><a href="{{ .url }}"{{ if hasPrefix .url "http" }} rel="me noopener"{{ end }}>{{ partial "icon.html" .icon }}<span class="link-label">{{ .label }}</span><span class="link-text">{{ .text }}</span></a></li>
-        {{- end }}
-      </ul>
-    </div>
-    {{- with resources.Get $r.avatar }}
-    {{- $img := .Fill "320x320 center webp q85" }}
-    {{- $img2 := .Fill "640x640 center webp q80" }}
-    <img class="avatar" src="{{ $img.RelPermalink }}" srcset="{{ $img.RelPermalink }} 1x, {{ $img2.RelPermalink }} 2x" width="160" height="160" alt="Portrait of {{ $r.name }}">
-    {{- end }}
-  </div>
-  <div class="toolbar wrap">
-    <button type="button" class="btn" data-print hidden>{{ partial "icon.html" "download" }}Download PDF</button>
-    <button type="button" class="btn btn-icon" data-theme-toggle aria-label="Toggle dark mode" hidden>
-      <span class="when-light">{{ partial "icon.html" "moon" }}</span><span class="when-dark">{{ partial "icon.html" "sun" }}</span>
-    </button>
-  </div>
-</header>
-
-<main id="main" class="wrap">
-  <section aria-labelledby="about-h">
-    <h2 id="about-h">About</h2>
-    <div class="about">
-      {{- range $r.about }}<p>{{ . | markdownify }}</p>{{ end }}
-    </div>
-  </section>
-
-  <section aria-labelledby="exp-h">
-    <h2 id="exp-h">Experience</h2>
-    {{- range $r.experience }}
-    <article class="company">
-      <h3 class="company-name">{{ .company }}{{ with .location }} <span class="muted">· {{ . }}</span>{{ end }}</h3>
-      {{- range .roles }}
-      <div class="role">
-        <div class="role-head">
-          <h4>{{ .title }}</h4>
-          <p class="dates">{{ .dates }}</p>
+<div class="wrap">
+    <header class="hero">
+      <div class="window">
+        <div class="window-bar" aria-hidden="true"><span></span><span></span><span></span><code>~/jldeen — zsh</code></div>
+        <div class="window-body">
+          <p class="prompt" aria-hidden="true"><span class="ps">~/jldeen</span> <span class="ps2">$</span> whoami</p>
+          <div class="hero-grid">
+            <div>
+              <h1>{{ $r.name }}</h1>
+              <p class="role">{{ $r.headline }}</p>
+              <p class="pitch">{{ $r.pitch }}</p>
+              <p class="focus"><span class="comment" aria-hidden="true"># </span>{{ $r.focus }}</p>
+            </div>
+            {{- with resources.Get $r.avatar }}{{ $img := .Fill "240x240 center webp q85" }}
+            <img class="avatar" src="{{ $img.RelPermalink }}" width="120" height="120" alt="Portrait of {{ $r.name }}">
+            {{- end }}
+          </div>
+          <ul class="links" aria-label="Contact and profiles">
+            {{- range $r.links }}
+            <li><a href="{{ .url }}">{{ partial "icon.html" .icon }}<span>{{ .text }}</span></a></li>
+            {{- end }}
+            <li class="loc">{{ partial "icon.html" "pin" }}<span>{{ $r.location }}</span></li>
+          </ul>
         </div>
-        {{- with .summary }}<p class="role-summary">{{ . | markdownify }}</p>{{ end }}
-        {{- with .bullets }}
-        <ul class="bullets">
-          {{- range . }}<li>{{ . | markdownify }}</li>{{ end }}
-        </ul>
-        {{- end }}
       </div>
-      {{- end }}
-    </article>
-    {{- end }}
+      <div class="actions">
+        <button type="button" class="btn" data-print hidden>{{ partial "icon.html" "download" }}<code>print --pdf</code></button>
+        <button type="button" class="btn" data-theme-toggle aria-label="Toggle dark mode" hidden>
+          <span class="when-light">{{ partial "icon.html" "moon" }}</span><span class="when-dark">{{ partial "icon.html" "sun" }}</span>
+        </button>
+      </div>
+    </header>
 
-    {{- with $r.earlier }}
-    <article class="company earlier">
-      <h3 class="company-name">Earlier experience</h3>
-      <ul class="compact">
-        {{- range . }}
-        <li>
-          <div class="role-head"><p><strong>{{ .title }}</strong>, {{ .company }}</p><p class="dates">{{ .dates }}</p></div>
-          <p class="muted">{{ .summary | markdownify }}</p>
-        </li>
-        {{- end }}
-      </ul>
-    </article>
-    {{- end }}
-  </section>
+    <main id="main">
+      <section aria-labelledby="c-about">
+        <h2 id="c-about"><span aria-hidden="true">## </span>about</h2>
+        <div class="readme">{{ range $r.about }}<p>{{ . | markdownify }}</p>{{ end }}</div>
+      </section>
 
-  <section aria-labelledby="proj-h">
-    <h2 id="proj-h">Selected projects</h2>
-    <ul class="projects">
-      {{- range $r.projects }}
-      <li class="project">
-        <h3><a href="{{ .url }}">{{ .name }}{{ partial "icon.html" "arrow" }}</a></h3>
-        <p class="muted small">{{ .role }}<span class="print-url"> · {{ .url | replaceRE "^https?://" "" }}</span></p>
-        <p>{{ .summary | markdownify }}</p>
-      </li>
-      {{- end }}
-    </ul>
-  </section>
+      <section aria-labelledby="c-exp">
+        <h2 id="c-exp"><span aria-hidden="true">## </span>experience</h2>
+        <ol class="timeline">
+          {{- range $r.experience }}{{ $co := .company }}
+          {{- range $i, $role := .roles }}
+          <li class="{{ if eq $i 0 }}head{{ end }}">
+            <div class="meta"><code class="dates">{{ $role.dates }}</code></div>
+            <div class="body">
+              <h3>{{ $role.title }} <span class="at">@ {{ $co }}</span></h3>
+              {{- with $role.summary }}<p>{{ . | markdownify }}</p>{{ end }}
+              {{- with $role.bullets }}<ul>{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ul>{{ end }}
+            </div>
+          </li>
+          {{- end }}
+          {{- end }}
+          <li class="earlier">
+            <div class="meta"><code class="dates">2004 – 2016</code></div>
+            <div class="body">
+              <h3>Earlier <span class="at">@ IT, support and consulting</span></h3>
+              <ul class="log">
+                {{- range $r.earlier }}<li><code>{{ .dates }}</code> {{ .title }}, {{ .company }}</li>{{ end }}
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </section>
 
-  <div class="two-col">
-    <section aria-labelledby="skills-h">
-      <h2 id="skills-h">Skills</h2>
-      {{- range $r.skills }}
-      <h3 class="skill-group">{{ .group }}</h3>
-      <ul class="tags">
-        {{- range .items }}<li>{{ . }}</li>{{ end }}
-      </ul>
-      {{- end }}
-    </section>
+      <section aria-labelledby="c-proj">
+        <h2 id="c-proj"><span aria-hidden="true">## </span>projects</h2>
+        <ul class="repos">
+          {{- range $r.projects }}
+          <li>
+            <h3><a href="{{ .url }}">{{ partial "icon.html" "github" }}{{ .name }}</a></h3>
+            <p>{{ .summary }}</p>
+            <p class="repo-meta"><code>{{ .url | replaceRE "^https?://(github.com/)?" "" }}</code> · {{ .role }}</p>
+          </li>
+          {{- end }}
+        </ul>
+      </section>
 
-    <section aria-labelledby="rec-h">
-      <h2 id="rec-h">Recognition</h2>
-      <ul class="recognition">
-        {{- range $r.recognition }}
-        <li><strong>{{ .name }}</strong><span class="muted">{{ .body }} · {{ .dates }}</span></li>
-        {{- end }}
-      </ul>
-    </section>
-  </div>
-</main>
+      <div class="split">
+        <section aria-labelledby="c-skills">
+          <h2 id="c-skills"><span aria-hidden="true">## </span>skills</h2>
+          {{- range $r.skills }}
+          <h3 class="group">{{ .group }}</h3>
+          <ul class="flags">{{ range .items }}<li>{{ . }}</li>{{ end }}</ul>
+          {{- end }}
+        </section>
+        <section aria-labelledby="c-rec">
+          <h2 id="c-rec"><span aria-hidden="true">## </span>recognition</h2>
+          <ul class="rec">
+            {{- range $r.recognition }}<li><strong>{{ .name }}</strong><code>{{ .body }} · {{ .dates }}</code></li>{{ end }}
+          </ul>
+        </section>
+      </div>
+    </main>
+
+</div>
 {{ end }}

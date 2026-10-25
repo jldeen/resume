@@ -2,10 +2,9 @@
   var root = document.documentElement;
   var toggle = document.querySelector("[data-theme-toggle]");
   var printBtn = document.querySelector("[data-print]");
-  var media = window.matchMedia("(prefers-color-scheme: dark)");
-
+  // Dark-first: dark unless the visitor has chosen light.
   function current() {
-    return root.dataset.theme || (media.matches ? "dark" : "light");
+    return root.dataset.theme === "light" ? "light" : "dark";
   }
 
   function sync() {
@@ -24,11 +23,6 @@
       root.dataset.theme = next;
       try { localStorage.setItem("theme", next); } catch (e) {}
       sync();
-    });
-    media.addEventListener("change", function () {
-      var saved = null;
-      try { saved = localStorage.getItem("theme"); } catch (e) {}
-      if (!saved) { delete root.dataset.theme; sync(); }
     });
   }
 

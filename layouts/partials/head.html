@@ -6,8 +6,7 @@
 <meta name="author" content="{{ site.Params.author }}">
 <link rel="canonical" href="{{ .Permalink }}">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0d1117">
 <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
 <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
 {{- $og := "" }}
@@ -22,7 +21,7 @@
   (function () {
     try {
       var t = localStorage.getItem("theme");
-      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+      document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
     } catch (e) {}
   })();
 </script>
