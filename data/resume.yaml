@@ -3,7 +3,7 @@
 name: Jessica Deen
 headline: Staff Developer Advocate at GitHub
 pitch: I help executives tell technical stories that land on stage.
-focus: Executive keynote stories and demos across GitHub Copilot, Microsoft Foundry, Fabric, DevOps and open source.
+focus: Executive keynote stories and demos across GitHub Copilot, Microsoft Foundry, Fabric, DevOps, and open source.
 location: San Francisco Bay Area
 avatar: images/jessica-deen.png
 
@@ -30,8 +30,8 @@ links:
     icon: globe
 
 about:
-  - At GitHub, I'm part of a small, specialized team embedded in executive cohorts with CEOs, EVPs and their leadership teams. Whatever the message is (GitHub Copilot, Microsoft Foundry, Fabric, DevOps or open source), I work out the story, design and build the demos that prove it, and support the keynote workstream from first draft through show day.
-  - "Before GitHub, I was a developer advocate at AWS and Microsoft, focused on containers, Kubernetes, serverless and DevOps, after more than a decade in IT. The topics change; the job doesn't: make complex technology clear, credible and memorable."
+  - At GitHub, I'm part of a small, specialized team embedded in executive cohorts with CEOs, EVPs, and their leadership teams. Whatever the message is (GitHub Copilot, Microsoft Foundry, Fabric, DevOps, or open source), I work out the story, design and build the demos that prove it, and support the keynote workstream from first draft through show day.
+  - "Before GitHub, I was a developer advocate at AWS and Microsoft, focused on containers, Kubernetes, serverless, and DevOps, after more than a decade in IT. The topics change; the job doesn't: make complex technology clear, credible, and memorable."
 
 experience:
   - company: GitHub
@@ -41,8 +41,8 @@ experience:
         dates: Apr 2024 – Present
         summary: Small, specialized team embedded in executive cohorts, turning each leader's message into a keynote story and the demos that prove it.
         bullets:
-          - Partner with executive leaders and their teams to shape keynote narratives, scripts and talk tracks for flagship events, across GitHub Copilot, Microsoft Foundry, Fabric, DevOps and open source.
-          - Design and build demos end to end (repos, environments, fallbacks and video backups) so they hold up live.
+          - Partner with executive leaders and their teams to shape keynote narratives, scripts, and talk tracks for flagship events, across GitHub Copilot, Microsoft Foundry, Fabric, DevOps, and open source.
+          - Design and build demos end to end (repos, environments, fallbacks, and video backups) so they hold up live.
           - Support the keynote workstream from first draft through rehearsals to backstage on show day, for events like GitHub Universe and Microsoft Build.
           - Pressure-test product readiness early, raise gaps with product and engineering, and reshape or cut demos that aren't ready.
           - Presented at GitHub Universe 2025.
@@ -54,23 +54,23 @@ experience:
         dates: Aug 2022 – Apr 2024
         bullets:
           - Drove developer-experience initiatives and community growth for Amazon ECS and serverless, and fed developer feedback back to the product teams.
-          - Co-created the Containers on AWS community hub (blog, frontend and GitHub Actions deployment pipelines). Daily traffic grew 400% in 5 months (160,000 views).
+          - Co-created the Containers on AWS community hub (blog, frontend, and GitHub Actions deployment pipelines). Daily traffic grew 400% in 5 months (160,000 views).
           - Created reusable content and samples for infrastructure as code (AWS CloudFormation, AWS SAM CLI) and GitHub Actions reusable workflows.
 
   - company: Microsoft
     roles:
       - title: Principal Cloud Advocate
         dates: Sep 2021 – Jul 2022
-        summary: Set strategy, helped grow the team, and enabled engineers on containers, distributed systems and DevOps (Jenkins, GitHub Actions, Azure DevOps, Azure Bicep).
+        summary: Set strategy, helped grow the team, and enabled engineers on containers, distributed systems, and DevOps (Jenkins, GitHub Actions, Azure DevOps, Azure Bicep).
       - title: Senior Cloud Advocate
         dates: Sep 2018 – Sep 2021
         summary: Championed Azure through demos and code samples that brought DevOps best practices into existing processes, and gave engineering teams feedback on DevOps and containers.
       - title: Cloud Developer Advocate
         dates: Nov 2017 – Sep 2018
-        summary: Built one-to-many community relationships through public speaking, code contributions and two-way feedback between the community and product groups.
+        summary: Built one-to-many community relationships through public speaking, code contributions, and two-way feedback between the community and product groups.
       - title: Technical Evangelist
         dates: Mar 2016 – Nov 2017
-        summary: Produced videos, blog posts, code, open-source projects and documentation for the community.
+        summary: Produced videos, blog posts, code, open-source projects, and documentation for the community.
 
 earlier:
   - title: Systems Integration Engineer
@@ -96,7 +96,7 @@ earlier:
   - title: Owner
     company: Jessica Deen Consulting
     dates: Sep 2004 – Apr 2016
-    summary: Boutique IT infrastructure, networking and support for small and medium businesses.
+    summary: Boutique IT infrastructure, networking, and support for small and medium businesses.
 
 projects:
   - name: Waypoint
@@ -107,7 +107,7 @@ projects:
     role: Creator
     url: https://octocanvas.io
     repo: https://github.com/github/octocanvas
-    summary: Web app that turns GitHub profiles into GitHub-themed collectibles, including wallpapers, profile banners and trading cards.
+    summary: Web app that turns GitHub profiles into GitHub-themed collectibles, including wallpapers, profile banners, and trading cards.
   - name: script-to-animated-deck
     role: Creator
     url: https://github.com/jldeen/script-to-animated-deck
