@@ -54,7 +54,7 @@ experience:
         dates: Aug 2022 – Apr 2024
         bullets:
           - Drove developer-experience initiatives and community growth for Amazon ECS and serverless, and fed developer feedback back to the product teams.
-          - Co-created [Containers on AWS](https://containersonaws.com) (blog, frontend and GitHub Actions deployment pipelines). Daily traffic grew 400% in 5 months (160,000 views).
+          - Co-created the Containers on AWS community hub (blog, frontend and GitHub Actions deployment pipelines). Daily traffic grew 400% in 5 months (160,000 views).
           - Created reusable content and samples for infrastructure as code (AWS CloudFormation, AWS SAM CLI) and GitHub Actions reusable workflows.
 
   - company: Microsoft
@@ -107,14 +107,6 @@ projects:
     role: Creator
     url: https://github.com/jldeen/runlines
     summary: Fast, mobile-first web app for memorizing script lines.
-  - name: Containers on AWS
-    role: Co-creator
-    url: https://containersonaws.com
-    summary: Community hub for Amazon ECS. Built the blog, frontend and deployment pipelines; daily traffic grew 400% in 5 months.
-  - name: Bridge to Kubernetes
-    role: Contributor
-    url: https://github.com/microsoft/mindaro
-    summary: Contributed to Bridge to Kubernetes and added support for it to Tailwind Traders, an 11-microservice sample app.
   - name: keylight-cli
     role: Creator
     url: https://github.com/jldeen/keylight-cli
