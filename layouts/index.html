@@ -57,7 +57,7 @@
           <li class="earlier">
             <div class="meta"><code class="dates">2004 – 2016</code></div>
             <div class="body">
-              <h3>Earlier <span class="at">@ IT, support, and consulting</span></h3>
+              <h3>Earlier <span class="at">@ IT, consulting, and community roles</span></h3>
               <ul class="log">
                 {{- range $r.earlier }}<li><code>{{ .dates }}</code> {{ .title }}, {{ .company }}</li>{{ end }}
               </ul>
@@ -70,7 +70,7 @@
         <h2 id="c-proj"><span aria-hidden="true">## </span>projects</h2>
         <ul class="repos">
           {{- range $r.projects }}
-          <li>
+          <li{{ if .highlight }} class="highlight"{{ end }}>
             <h3><a href="{{ .url }}">{{ partial "icon.html" "github" }}{{ .name }}</a></h3>
             <p>{{ .summary }}</p>
             <p class="repo-meta"><code>{{ .url | replaceRE "^https?://(github.com/)?" "" }}</code>{{ with .repo }} · <a href="{{ . }}"><code>{{ . | replaceRE "^https?://(github.com/)?" "" }}</code></a>{{ end }} · {{ .role }}</p>
@@ -83,7 +83,7 @@
         <section aria-labelledby="c-skills">
           <h2 id="c-skills"><span aria-hidden="true">## </span>skills</h2>
           {{- range $r.skills }}
-          <h3 class="group">{{ .group }}</h3>
+          {{- if gt (len $r.skills) 1 }}<h3 class="group">{{ .group }}</h3>{{ end }}
           <ul class="flags">{{ range .items }}<li>{{ . }}</li>{{ end }}</ul>
           {{- end }}
         </section>

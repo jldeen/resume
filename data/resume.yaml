@@ -3,7 +3,7 @@
 name: Jessica Deen
 headline: Staff Developer Advocate at GitHub
 pitch: I help executives tell technical stories that land on stage.
-focus: Executive keynote stories and demos across GitHub Copilot, Microsoft Foundry, Fabric, DevOps, and open source.
+focus: I partner with executive leaders to turn complex technology into keynote stories and live demos people understand, believe, and remember.
 location: San Francisco Bay Area
 avatar: images/jessica-deen.png
 
@@ -41,10 +41,10 @@ experience:
         dates: Apr 2024 – Present
         summary: Small, specialized team embedded in executive cohorts, turning each leader's message into a keynote story and the demos that prove it.
         bullets:
-          - Partner with executive leaders and their teams to shape keynote narratives, scripts, and talk tracks for flagship events, across GitHub Copilot, Microsoft Foundry, Fabric, DevOps, and open source.
-          - Design and build demos end to end (repos, environments, fallbacks, and video backups) so they hold up live.
-          - Support the keynote workstream from first draft through rehearsals to backstage on show day, for events like GitHub Universe and Microsoft Build.
-          - Pressure-test product readiness early, raise gaps with product and engineering, and reshape or cut demos that aren't ready.
+          - Decide what's ready for stage. Pressure-test product readiness early, flag gaps to product and engineering, and reshape or cut demos that don't prove the claim.
+          - Shape keynote narratives, scripts, and talk tracks with executive leaders and their teams so each segment lands one clear message.
+          - Build demos end to end that hold up live, with fallbacks, video backups, and fast resets.
+          - Run the keynote workstream from first draft through rehearsals to backstage on show day, for events like GitHub Universe and Microsoft Build.
           - Presented at GitHub Universe 2025.
 
   - company: Amazon Web Services (AWS)
@@ -100,18 +100,21 @@ earlier:
 
 projects:
   - name: Waypoint
+    highlight: true
     role: Co-creator
     url: https://github.com/caldova/waypoint
-    summary: "End-to-end keynote demo: synthetic business records to hosted Microsoft Foundry agents and governed app workflows, deployed to Azure in one step."
+    summary: "Built for a keynote to show AI agents doing real business work end to end: synthetic records to hosted Microsoft Foundry agents and governed app workflows, deployed to Azure in one step."
   - name: OctoCanvas
+    highlight: true
     role: Creator
     url: https://octocanvas.io
     repo: https://github.com/github/octocanvas
     summary: Web app that turns GitHub profiles into GitHub-themed collectibles, including wallpapers, profile banners, and trading cards.
   - name: script-to-animated-deck
+    highlight: true
     role: Creator
     url: https://github.com/jldeen/script-to-animated-deck
-    summary: Copilot CLI plugin that turns a talk track into an animated keynote deck, with video and an editable PowerPoint that uses native animations.
+    summary: Built to get from a talk track to rehearsable keynote visuals in minutes. A Copilot CLI plugin that turns a script into an animated deck, video, and editable PowerPoint.
   - name: runlines
     role: Creator
     url: https://github.com/jldeen/runlines
@@ -126,34 +129,16 @@ projects:
     summary: My cross-platform shell and dev environment setup, starred by 249 developers and forked 110 times.
 
 skills:
-  - group: Storytelling & advocacy
+  - group: Core capabilities
     items:
-      - Technical storytelling
+      - Keynote storytelling
       - Executive communication
-      - "Keynote narratives & talk tracks"
-      - Technical demonstrations
+      - Demo design and engineering
+      - Product readiness and risk calls
       - Public speaking
       - Developer relations
-      - Developer feedback to product
-  - group: Platforms
-    items:
-      - GitHub Copilot
-      - GitHub Actions
-      - Microsoft Foundry
-      - Microsoft Fabric
-      - Microsoft Azure
-      - "AWS (Amazon ECS, serverless)"
-  - group: Engineering
-    items:
-      - "DevOps & CI/CD"
-      - Kubernetes
-      - "Docker & containers"
-      - "Infrastructure as code (Bicep, CloudFormation, SAM)"
-      - Linux
-      - Python
-      - JavaScript / Node.js
-      - Rust
-      - Open source
+      - DevOps and cloud platforms
+      - AI agents and GitHub Copilot
 
 recognition:
   - name: Microsoft MVP, Windows Expert IT Pro
