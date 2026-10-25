@@ -99,6 +99,15 @@ earlier:
     summary: Boutique IT infrastructure, networking and support for small and medium businesses.
 
 projects:
+  - name: Waypoint
+    role: Co-creator
+    url: https://github.com/caldova/waypoint
+    summary: "End-to-end keynote demo: synthetic business records to hosted Microsoft Foundry agents and governed app workflows, deployed to Azure in one step."
+  - name: OctoCanvas
+    role: Creator
+    url: https://octocanvas.io
+    repo: https://github.com/github/octocanvas
+    summary: Web app that turns GitHub profiles into GitHub-themed collectibles, including wallpapers, profile banners and trading cards.
   - name: script-to-animated-deck
     role: Creator
     url: https://github.com/jldeen/script-to-animated-deck
@@ -127,7 +136,7 @@ skills:
 recognition:
   - name: Microsoft MVP, Windows Expert IT Pro
     body: Microsoft
-    dates: 2013 – 2015
+    dates: 2013 – 2016
   - name: Carl Quinn Speaker Award
     body: JFrog
     dates: "2020"

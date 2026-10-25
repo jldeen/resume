@@ -119,6 +119,7 @@ h2 span { color: var(--purple); }
   .timeline .body { padding-left: .9rem; } .timeline .body::before { width: .55rem; height: .55rem; top: .35rem; left: -1rem; margin-left: 0; box-shadow: none !important; }
   .timeline .body > ul { margin-top: .1rem; } .timeline .body > ul > li + li { margin-top: 0; }
   .log { columns: 2; column-gap: 1rem; } .log li { font-size: .85rem; break-inside: avoid; }
+  .repos li:nth-child(n+3) p:not(.repo-meta) { display: none; }
   .repos { grid-template-columns: repeat(2, 1fr); gap: .5rem 1rem; } .repos li { border: 0; padding: 0; } .repos p { margin-top: .05rem; font-size: .88rem; }
   .split { grid-template-columns: 3fr 2fr; }
   .group { display: inline; margin: 0; } .group::after { content: ": "; }

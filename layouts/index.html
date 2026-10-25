@@ -73,7 +73,7 @@
           <li>
             <h3><a href="{{ .url }}">{{ partial "icon.html" "github" }}{{ .name }}</a></h3>
             <p>{{ .summary }}</p>
-            <p class="repo-meta"><code>{{ .url | replaceRE "^https?://(github.com/)?" "" }}</code> · {{ .role }}</p>
+            <p class="repo-meta"><code>{{ .url | replaceRE "^https?://(github.com/)?" "" }}</code>{{ with .repo }} · <a href="{{ . }}"><code>{{ . | replaceRE "^https?://(github.com/)?" "" }}</code></a>{{ end }} · {{ .role }}</p>
           </li>
           {{- end }}
         </ul>
