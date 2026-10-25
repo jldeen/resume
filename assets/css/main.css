@@ -255,7 +255,7 @@ h2 {
   .compact .role-head p { font-size: 0.92rem; }
 
   /* Projects: name, role and URL only */
-  .projects { grid-template-columns: repeat(3, 1fr); gap: 0.15rem 1rem; }
+  .projects { grid-template-columns: repeat(2, 1fr); gap: 0.15rem 1rem; }
   .project { padding: 0; border: 0; background: none; }
   .project h3 { font-size: 0.95rem; }
   .project p.small { font-size: 0.85rem; }
