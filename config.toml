@@ -6,7 +6,7 @@ disableKinds = ["taxonomy", "term", "RSS", "section"]
 
 [params]
   author = "Jessica Deen"
-  description = "Jessica Deen is a Staff Developer Advocate at GitHub who helps executives tell technical stories that land on stage: keynote narratives, talk tracks, and the demos that prove them."
+  description = "Jessica Deen is an engineer and Staff Developer Advocate at GitHub who builds things and makes complex tech like AI, Kubernetes, and DevOps easier to learn, and supports high-stakes keynotes with the same engineering."
   ghRepo = "https://github.com/jldeen/resume/"
 
 [markup.goldmark.renderer]

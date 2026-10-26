@@ -2,8 +2,8 @@
 
 name: Jessica Deen
 headline: Staff Developer Advocate at GitHub
-pitch: I help executives tell technical stories that land on stage.
-focus: I partner with executive leaders to turn complex technology into keynote stories and live demos people understand, believe, and remember.
+pitch: I'm an engineer who builds things and makes complex tech easier to learn.
+focus: I have high standards for what "done" looks like. I make AI, Kubernetes, and DevOps approachable, and that same engineering is why the high-stakes keynotes I support land.
 location: San Francisco Bay Area
 avatar: images/jessica-deen.png
 
@@ -30,8 +30,9 @@ links:
     icon: globe
 
 about:
-  - At GitHub, I'm part of a small, specialized team embedded in executive cohorts with CEOs, EVPs, and their leadership teams. Whatever the message is (GitHub Copilot, Microsoft Foundry, Fabric, DevOps, or open source), I work out the story, design and build the demos that prove it, and support the keynote workstream from first draft through show day.
-  - "Before GitHub, I was a developer advocate at AWS and Microsoft, focused on containers, Kubernetes, serverless, and DevOps, after more than a decade in IT. The topics change; the job doesn't: make complex technology clear, credible, and memorable."
+  - I'm an engineer at heart, and I like building things. To me, "done" means repeatable, reliable, automated, and clear enough that someone else can pick it up. I love taking complex technology like AI agents, Kubernetes, and DevOps and making it easier for others to learn.
+  - At GitHub, I bring that engineering to a small, specialized team that supports executives at high-visibility, high-impact events. I build the demos and environments behind the story, and because they're built to hold up, the keynotes they support land.
+  - Before GitHub, I was a developer advocate at AWS and Microsoft, focused on containers, Kubernetes, serverless, and DevOps, after more than a decade in IT.
 
 experience:
   - company: GitHub
@@ -39,12 +40,12 @@ experience:
     roles:
       - title: Staff Developer Advocate
         dates: Apr 2024 – Present
-        summary: Small, specialized team embedded in executive cohorts, turning each leader's message into a keynote story and the demos that prove it.
+        summary: Engineer on a small, specialized team supporting executives at high-visibility events, building the demos, environments, and tooling that make complex technology easy to follow and reliable on stage.
         bullets:
+          - Build demos, sample apps, and environments end to end to a high bar. They're repeatable, automated, and reliable live, with fallbacks, video backups, and fast resets.
+          - Make complex technology like AI agents, GitHub Copilot, and DevOps learnable, through repos, tools, and walkthroughs people can run, reuse, and learn from.
+          - Bring that engineering to flagship keynotes like GitHub Universe and Microsoft Build. Partner with executive leaders and their teams on narratives, scripts, and talk tracks, from first draft to backstage on show day.
           - Decide what's ready for stage. Pressure-test product readiness early, flag gaps to product and engineering, and reshape or cut demos that don't prove the claim.
-          - Shape keynote narratives, scripts, and talk tracks with executive leaders and their teams so each segment lands one clear message.
-          - Build demos end to end that hold up live, with fallbacks, video backups, and fast resets.
-          - Run the keynote workstream from first draft through rehearsals to backstage on show day, for events like GitHub Universe and Microsoft Build.
           - Presented at GitHub Universe 2025.
 
   - company: Amazon Web Services (AWS)
@@ -131,14 +132,14 @@ projects:
 skills:
   - group: Core capabilities
     items:
-      - Keynote storytelling
-      - Executive communication
-      - Demo design and engineering
-      - Product readiness and risk calls
-      - Public speaking
-      - Developer relations
-      - DevOps and cloud platforms
-      - AI agents and GitHub Copilot
+      - "Kubernetes & containers"
+      - "DevOps & CI/CD (GitHub Actions)"
+      - "Cloud (Azure, AWS)"
+      - "AI agents & GitHub Copilot"
+      - Infrastructure as code
+      - "Demo & tooling engineering"
+      - Technical storytelling
+      - "Teaching & developer education"
 
 recognition:
   - name: Microsoft MVP, Windows Expert IT Pro
