@@ -13,7 +13,28 @@ This is the current home of [Jessica Deen's Resume](https://resume.jessicadeen.c
 
 The main goal of converting the resume from print to web interface is to demonstrate skills and knowledge stated in said resume first hand. 
 
-As an unrelated bonus, this online resume also supports users' OS preference when it comes to light/dark themes, and allows for users to override their preference as desired.
+The site is a small custom Hugo layout with no CSS framework, icon font, or third-party requests. It uses a developer/terminal-inspired design that is dark by default (with a light-mode toggle), works on mobile, and has a print stylesheet so **Download PDF** (or the browser's Print → Save as PDF) produces a clean one-page resume.
+
+## Editing content
+
+All resume content lives in [`data/resume.yaml`](data/resume.yaml): headline, About, experience, projects, skills, recognition and contact links. Text fields accept inline Markdown. Site-wide settings (title, meta description) are in [`config.toml`](config.toml).
+
+| What | Where |
+|---|---|
+| Content | `data/resume.yaml` |
+| Page template | `layouts/index.html`, `layouts/partials/` |
+| Styles (screen + print) | `assets/css/main.css` |
+| Theme toggle / print button | `assets/js/theme.js` |
+| Portrait | `assets/images/jessica-deen.png` (resized to WebP at build) |
+
+## Running locally
+
+Requires [Hugo](https://gohugo.io/installation/) 0.158 or later (any edition) (CI installs 0.168.0 on the runner and uploads the built site; the dev container uses the same version).
+
+```sh
+hugo server          # http://localhost:1313
+hugo --gc --minify   # production build into ./public
+```
 
 ## Deployment
 

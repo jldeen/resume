@@ -1,0 +1,153 @@
+# All resume content lives here. Text fields support inline Markdown (links, emphasis).
+
+name: Jessica Deen
+headline: Staff Developer Advocate at GitHub
+pitch: I'm an engineer who builds things and makes complex tech easier to learn.
+focus: I have high standards for what "done" looks like. I make AI, Kubernetes, and DevOps approachable, and that same engineering is why the high-stakes keynotes I support land.
+location: San Francisco Bay Area
+avatar: images/jessica-deen.png
+
+links:
+  - label: Email
+    text: jessica@jessicadeen.com
+    url: mailto:jessica@jessicadeen.com
+    icon: mail
+  - label: LinkedIn
+    text: linkedin.com/in/jldeen
+    url: https://www.linkedin.com/in/jldeen
+    icon: linkedin
+  - label: GitHub
+    text: github.com/jldeen
+    url: https://github.com/jldeen
+    icon: github
+  - label: X
+    text: x.com/jldeen
+    url: https://x.com/jldeen
+    icon: x
+  - label: Website
+    text: jessicadeen.com
+    url: https://jessicadeen.com
+    icon: globe
+
+about:
+  - I'm an engineer at heart, and I like building things. To me, "done" means repeatable, reliable, automated, and clear enough that someone else can pick it up. I love taking complex technology like AI agents, Kubernetes, and DevOps and making it easier for others to learn.
+  - At GitHub, I bring that engineering to a small, specialized team that supports executives at high-visibility, high-impact events. I build the demos and environments behind the story, and because they're built to hold up, the keynotes they support land.
+  - Before GitHub, I was a developer advocate at AWS and Microsoft, focused on containers, Kubernetes, serverless, and DevOps, after more than a decade in IT.
+
+experience:
+  - company: GitHub
+    location: Remote
+    roles:
+      - title: Staff Developer Advocate
+        dates: Apr 2024 – Present
+        summary: Engineer on a small, specialized team supporting executives at high-visibility events, building the demos, environments, and tooling that make complex technology easy to follow and reliable on stage.
+        bullets:
+          - Build demos, sample apps, and environments end to end to a high bar. They're repeatable, automated, and reliable live, with fallbacks, video backups, and fast resets.
+          - Make complex technology like AI agents, GitHub Copilot, and DevOps learnable, through repos, tools, and walkthroughs people can run, reuse, and learn from.
+          - Bring that engineering to flagship keynotes like GitHub Universe and Microsoft Build. Partner with executive leaders and their teams on narratives, scripts, and talk tracks, from first draft to backstage on show day.
+          - Decide what's ready for stage. Pressure-test product readiness early, flag gaps to product and engineering, and reshape or cut demos that don't prove the claim.
+          - Presented at GitHub Universe 2025.
+
+  - company: Amazon Web Services (AWS)
+    location: Remote
+    roles:
+      - title: Principal Developer Advocate
+        dates: Aug 2022 – Apr 2024
+        bullets:
+          - Drove developer-experience initiatives and community growth for Amazon ECS and serverless, and fed developer feedback back to the product teams.
+          - Co-created the Containers on AWS community hub (blog, frontend, and GitHub Actions deployment pipelines). Daily traffic grew 400% in 5 months (160,000 views).
+          - Created reusable content and samples for infrastructure as code (AWS CloudFormation, AWS SAM CLI) and GitHub Actions reusable workflows.
+
+  - company: Microsoft
+    roles:
+      - title: Principal Cloud Advocate
+        dates: Sep 2021 – Jul 2022
+        summary: Set strategy, helped grow the team, and enabled engineers on containers, distributed systems, and DevOps (Jenkins, GitHub Actions, Azure DevOps, Azure Bicep).
+      - title: Senior Cloud Advocate
+        dates: Sep 2018 – Sep 2021
+        summary: Championed Azure through demos and code samples that brought DevOps best practices into existing processes, and gave engineering teams feedback on DevOps and containers.
+      - title: Cloud Developer Advocate
+        dates: Nov 2017 – Sep 2018
+        summary: Built one-to-many community relationships through public speaking, code contributions, and two-way feedback between the community and product groups.
+      - title: Technical Evangelist
+        dates: Mar 2016 – Nov 2017
+        summary: Produced videos, blog posts, code, open-source projects, and documentation for the community.
+
+earlier:
+  - title: Systems Integration Engineer
+    company: SPK and Associates
+    dates: Feb 2014 – Mar 2016
+    summary: Ran Windows and Linux systems for engineering R&D teams and automated their CAD/PLM toolchain.
+  - title: Social Media Engagement Lead
+    company: Microsoft (contract via Corporate Online Services)
+    dates: Oct 2011 – Feb 2014
+    summary: Represented Microsoft operations engineering on Twitter and community forums; consistently recognized for the most helpful answers.
+  - title: Social Media Engagement Lead
+    company: Microsoft (via Crimson Consulting)
+    dates: Apr 2009 – Jul 2010
+    summary: Supported IT pros moving to Windows 7 through Microsoft's social channels and forums.
+  - title: Senior Technology Specialist
+    company: ClickAway
+    dates: Mar 2009 – Feb 2012
+    summary: Led in-store tech services and data recovery, generating $500K+ in revenue at a 79% recovery rate.
+  - title: Engineering Sales Associate / Webmaster
+    company: Usedlaptops.com
+    dates: Aug 2008 – Mar 2009
+    summary: Ran the company website and supported engineering sales.
+  - title: Owner
+    company: Jessica Deen Consulting
+    dates: Sep 2004 – Apr 2016
+    summary: Boutique IT infrastructure, networking, and support for small and medium businesses.
+
+projects:
+  - name: Waypoint
+    highlight: true
+    role: Co-creator
+    url: https://github.com/caldova/waypoint
+    summary: "Built for a keynote to show AI agents doing real business work end to end: synthetic records to hosted Microsoft Foundry agents and governed app workflows, deployed to Azure in one step."
+  - name: OctoCanvas
+    highlight: true
+    role: Creator
+    url: https://octocanvas.io
+    repo: https://github.com/github/octocanvas
+    summary: Web app that turns GitHub profiles into GitHub-themed collectibles, including wallpapers, profile banners, and trading cards.
+  - name: script-to-animated-deck
+    highlight: true
+    role: Creator
+    url: https://github.com/jldeen/script-to-animated-deck
+    summary: Built to get from a talk track to rehearsable keynote visuals in minutes. A Copilot CLI plugin that turns a script into an animated deck, video, and editable PowerPoint.
+  - name: runlines
+    role: Creator
+    url: https://github.com/jldeen/runlines
+    summary: Fast, mobile-first web app for memorizing script lines.
+  - name: keylight-cli
+    role: Creator
+    url: https://github.com/jldeen/keylight-cli
+    summary: Cross-platform CLI for controlling Elgato Key Lights over the local network.
+  - name: dotfiles
+    role: Creator
+    url: https://github.com/jldeen/dotfiles
+    summary: My cross-platform shell and dev environment setup, starred by 249 developers and forked 110 times.
+
+skills:
+  - group: Core capabilities
+    items:
+      - "Kubernetes & containers"
+      - "DevOps & CI/CD (GitHub Actions)"
+      - "Cloud (Azure, AWS)"
+      - "AI agents & GitHub Copilot"
+      - Infrastructure as code
+      - "Demo & tooling engineering"
+      - Technical storytelling
+      - "Teaching & developer education"
+
+recognition:
+  - name: Microsoft MVP, Windows Expert IT Pro
+    body: Microsoft
+    dates: 2013 – 2016
+  - name: Carl Quinn Speaker Award
+    body: JFrog
+    dates: "2020"
+  - name: Co-organizer, Pacific IT Pros
+    body: Community
+    dates: 2010 – Present

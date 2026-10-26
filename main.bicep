@@ -2,7 +2,6 @@ targetScope = 'subscription'
 
 param rgName string = 'resume'
 param location string = 'eastus2'
-param repositoryToken string
 
 var customDomains = [
   'resume.jessicadeen.com'
@@ -20,9 +19,5 @@ module staticSiteProd './modules/createAzureStaticSite.bicep' = {
     name: 'resume'
     location: location
     customDomains: customDomains
-    repositoryUrl: 'https://github.com/jldeen/resume'
-    repositoryToken: repositoryToken
-    branch: 'main'
-    skipActionGeneration: true
   }
 }

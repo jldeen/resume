@@ -10,67 +10,50 @@ on:
       - main
 
 env:
-  # The name of the resource group and static site to be created.
+  # The name of the resource group and static site.
   rgName: "resume"
 
   # The location to store the meta data for the deployment.
   location: "eastus2"
 
+# Deploys share one ARM deployment name and SWA resource, so run them one at a time.
+concurrency:
+  group: swa-resume-deploy
+  cancel-in-progress: false
+
 permissions:
   contents: read
   pull-requests: write
-  id-token: write
 
 jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
-    outputs:
-      static_app_token: ${{ steps.deploy-static-site.outputs.deployment_token }}
     name: Build and Deploy Job
     steps:
-      # checkout branch
-      - uses: actions/checkout@v2
-        with:
-          submodules: true
+      - uses: actions/checkout@v4
 
-      # login to Azure
       - name: "Login via Azure CLI"
-        uses: azure/login@v1
+        uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      # detach provider
-      - name: "Detach provider"
-        continue-on-error: true
-        run: |
-          check=$(az group list --query "[].name" --output tsv | grep "resume")
-          if [[ $check ]]; then
-            echo "Resource group exists"
-            az staticwebapp disconnect -n ${{ env.rgName }}
-          else
-            echo "Resource group does not exist. Nothing to detach..."
-          fi
-      
-      # deploy infra
       - name: "Deploy Resume Infra"
-        id: deploy-static-site
-        uses: azure/arm-deploy@v1
+        uses: azure/arm-deploy@v2
         with:
           scope: subscription
           deploymentName: ${{ env.rgName }}
-          resourceGroupName: ${{ env.rgName }}
-          region: eastus2
+          region: ${{ env.location }}
           template: ./main.bicep
-          parameters: location=${{ env.location }} rgName=${{ env.rgName }} repositoryToken=${{ secrets.REPOSITORY_TOKEN }}
+          parameters: location=${{ env.location }} rgName=${{ env.rgName }}
           failOnStdErr: false
 
-      - name: "Santize Outputs"
+      - name: "Get deployment token and commit info"
         id: sanitize-outputs
         run: |
-          DEPLOYMENT_TOKEN=$(az staticwebapp secrets list --name ${{ env.rgName }} --query "properties.apiKey" --output tsv)
+          DEPLOYMENT_TOKEN=$(az staticwebapp secrets list --name ${{ env.rgName }} --resource-group ${{ env.rgName }} --query "properties.apiKey" --output tsv)
           echo "::add-mask::$DEPLOYMENT_TOKEN"
-          echo "::set-output name=DEPLOYMENT_TOKEN::$DEPLOYMENT_TOKEN"
+          echo "DEPLOYMENT_TOKEN=$DEPLOYMENT_TOKEN" >> "$GITHUB_OUTPUT"
 
           # Hugo Env Vars
           echo "AUTHORNAME=$(git log -1 --format=%an)" >> $GITHUB_ENV
@@ -78,43 +61,57 @@ jobs:
           echo "COMMITHASH=$(git log -1 --format=%H)" >> $GITHUB_ENV
           echo "COMMITSUBJECT=$(git log -1 --format=%s)" >> $GITHUB_ENV
 
-      - name: Build And Deploy Resume
-        id: builddeploy
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ steps.sanitize-outputs.outputs.DEPLOYMENT_TOKEN }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
-          action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "public" # Built app content directory - optional
-          ###### End of Repository/Build Configurations ######
+      # Build on the runner: the SWA build image's glibc is too old for current Hugo releases.
+      - name: Install Hugo
         env:
-          HUGO_VERSION: 0.121.1
+          HUGO_VERSION: 0.168.0
+        run: |
+          curl -fsSL -o "$RUNNER_TEMP/hugo.tar.gz" "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.tar.gz"
+          tar -xzf "$RUNNER_TEMP/hugo.tar.gz" -C "$RUNNER_TEMP" hugo
+          echo "$RUNNER_TEMP" >> "$GITHUB_PATH"
+
+      - name: Build Resume
+        env:
           HUGOxPARAMSxGITxLAST_COMMITxAUTHORNAME: ${{ env.AUTHORNAME }}
           HUGOxPARAMSxGITxLAST_COMMITxDATE: ${{ env.COMMITDATE }}
           HUGOxPARAMSxGITxLAST_COMMITxHASH: ${{ env.COMMITHASH }}
           HUGOxPARAMSxGITxLAST_COMMITxSUBJECT: ${{ env.COMMITSUBJECT }}
-      
-      - name: Add secret
-        uses: jldeen/actions-set-secret@releases/v1
+        run: |
+          hugo version
+          hugo --gc --minify
+
+      - name: Deploy Resume
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
         with:
-          name: DEPLOYMENT_TOKEN
-          value: ${{ steps.sanitize-outputs.outputs.DEPLOYMENT_TOKEN }}
-          owner: jldeen
-          repository: resume
-          token: ${{ secrets.REPOSITORY_TOKEN }}
+          azure_static_web_apps_api_token: ${{ steps.sanitize-outputs.outputs.DEPLOYMENT_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (i.e. PR comments)
+          action: "upload"
+          app_location: "public" # Prebuilt site
+          api_location: ""
+          output_location: ""
+          skip_app_build: true
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
     name: Close Pull Request Job
     steps:
+      - name: "Login via Azure CLI"
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: "Get deployment token"
+        id: token
+        run: |
+          DEPLOYMENT_TOKEN=$(az staticwebapp secrets list --name ${{ env.rgName }} --resource-group ${{ env.rgName }} --query "properties.apiKey" --output tsv)
+          echo "::add-mask::$DEPLOYMENT_TOKEN"
+          echo "DEPLOYMENT_TOKEN=$DEPLOYMENT_TOKEN" >> "$GITHUB_OUTPUT"
+
       - name: Close Pull Request
         id: closepullrequest
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.DEPLOYMENT_TOKEN }}
+          azure_static_web_apps_api_token: ${{ steps.token.outputs.DEPLOYMENT_TOKEN }}
           action: "close"

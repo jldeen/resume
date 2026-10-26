@@ -1,23 +1,45 @@
-<title>{{ .Site.Title }}</title>
-
-<!-- Meta -->
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="{{ .Site.Params.description }}" />
-<meta name="author" content="{{ .Site.Params.author }}" />
-
-<link rel="shortcut icon" href="favicon.ico" />
-
-<!-- Google Fonts -->
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
-/>
-
-<!-- Theme SCSS -->
-{{ with resources.Get "scss/devresume.scss" | toCSS | minify | fingerprint }}
-<style>
-   {{ .Content|safeCSS }}
-</style>
-{{ end }}
+{{- $r := hugo.Data.resume -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ $r.name }}{{ end }}</title>
+<meta name="description" content="{{ site.Params.description }}">
+<meta name="author" content="{{ site.Params.author }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0d1117">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
+{{- $og := "" }}
+{{- with resources.Get $r.avatar }}{{ $og = .Fill "600x600 center webp q85" }}{{ end }}
+<meta property="og:type" content="profile">
+<meta property="og:title" content="{{ site.Title }}">
+<meta property="og:description" content="{{ $r.pitch }} {{ $r.focus }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{- with $og }}<meta property="og:image" content="{{ .Permalink }}">{{ end }}
+<meta name="twitter:card" content="summary">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+    } catch (e) {}
+  })();
+</script>
+{{- with resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+{{- end }}
+{{- if .IsHome }}
+<script type="application/ld+json">
+{{ dict
+  "@context" "https://schema.org"
+  "@type" "Person"
+  "name" $r.name
+  "jobTitle" "Staff Developer Advocate"
+  "worksFor" (dict "@type" "Organization" "name" "GitHub")
+  "description" site.Params.description
+  "url" site.BaseURL
+  "address" (dict "@type" "PostalAddress" "addressLocality" $r.location)
+  "sameAs" (slice "https://www.linkedin.com/in/jldeen" "https://github.com/jldeen" "https://x.com/jldeen" "https://jessicadeen.com")
+  | jsonify | safeJS }}
+</script>
+{{- end }}
